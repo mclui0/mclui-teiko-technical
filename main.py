@@ -18,6 +18,9 @@ from summary import calc_cell_frequencies
 def main():
     """Main function to run program and setup files"""
 
+    # Reset db if exists
+    os.remove("cell-count.db") if os.path.exists("cell-count.db") else None
+
     ### Part 1 - Database Setup ###
     create_db()
 
